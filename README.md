@@ -1,6 +1,6 @@
 # expo/fetch: canceling a released response body leaves an unhandled rejection
 
-Minimal reproducer for [expo/expo#51199](https://github.com/expo/expo/issues/51199).
+Minimal reproducer for [expo/expo#54039](https://github.com/expo/expo/issues/54039) (follow-up of [#51199](https://github.com/expo/expo/issues/51199), closed by the bot for a missing reproducer).
 Proposed fix: [expo/expo#54034](https://github.com/expo/expo/pull/54034) (`npm run test:with-fix` applies the same change).
 
 `FetchResponse`'s body stream `cancel` callback calls the native `NativeResponse.cancelStreaming()`
