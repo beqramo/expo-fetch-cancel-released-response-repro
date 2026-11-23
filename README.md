@@ -1,6 +1,7 @@
 # expo/fetch: canceling a released response body leaves an unhandled rejection
 
 Minimal reproducer for [expo/expo#51199](https://github.com/expo/expo/issues/51199).
+Proposed fix: [expo/expo#54034](https://github.com/expo/expo/pull/54034) (`npm run test:with-fix` applies the same change).
 
 `FetchResponse`'s body stream `cancel` callback calls the native `NativeResponse.cancelStreaming()`
 and drops the promise it returns:
